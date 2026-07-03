@@ -86,7 +86,11 @@ window.HOLIDAY_DATA.push(
 
 // ============ AUGUST ============
 {m:8,d:1,holidays:[{name:"National Raspberry Cream Pie Day",cats:["dessert"]}],freebies:[]},
-{m:8,d:2,holidays:[{name:"National Ice Cream Sandwich Day",cats:["icecream"]}],freebies:[]},
+{m:8,d:2,holidays:[{name:"National Ice Cream Sandwich Day",cats:["icecream"]}],
+ freebies:[
+  {biz:"The Baked Bear",offer:"Custom ice cream sandwich specials (recent years: discounted sandwiches)",fine:"Verify each year",oc:"Huntington Beach; check current OC locations",cats:["icecream"],annual:false,kind:"deal"},
+  {biz:"Afters Ice Cream",offer:"Milky Bun promos fit today perfectly — watch their socials (OC-born)",fine:"Verify each year",oc:"Fountain Valley, Santa Ana, Irvine + more",cats:["icecream"],annual:false,kind:"deal"}
+ ]},
 {m:8,d:3,holidays:[{name:"National Watermelon Day",cats:["snack"]}],freebies:[]},
 {m:8,d:4,holidays:[{name:"National Chocolate Chip Cookie Day",cats:["dessert"]}],
  freebies:[
@@ -114,8 +118,14 @@ window.HOLIDAY_DATA.push(
   {biz:"On The Border",offer:"Fajita specials/freebies for rewards members (recent years)",fine:"App required",oc:"Check current OC locations",cats:["mexican"],annual:true},
   {biz:"Chili's",offer:"Fajita deals",fine:"Dine-in",oc:"Anaheim, Irvine, HB, Mission Viejo",cats:["mexican"],annual:true}
  ]},
-{m:8,d:19,holidays:[{name:"National Potato Day",cats:["snack","meal"]}],freebies:[]},
-{m:8,d:20,holidays:[{name:"National Lemonade Day",cats:["drinks"]},{name:"National Chocolate Pecan Pie Day",cats:["dessert"]}],freebies:[]},
+{m:8,d:19,holidays:[{name:"National Soft Serve Ice Cream Day",cats:["icecream"]},{name:"National Potato Day",cats:["snack","meal"]}],
+ freebies:[
+  {biz:"Dairy Queen",offer:"FREE small cone via the DQ app (their recurring Soft Serve Day promo)",fine:"DQ Rewards app required",oc:"Orange, Santa Ana, Garden Grove, La Habra",cats:["icecream"],annual:true}
+ ]},
+{m:8,d:20,holidays:[{name:"National Lemonade Day",cats:["drinks"]},{name:"National Chocolate Pecan Pie Day",cats:["dessert"]}],
+ freebies:[
+  {biz:"Hot Dog on a Stick",offer:"Fresh-squeezed lemonade promos (they also give free Hot Dogs on a Stick on their July anniversary day)",fine:"Mall stands; verify each year",oc:"Check current OC mall locations",cats:["drinks"],annual:false,kind:"deal"}
+ ]},
 {m:8,d:21,holidays:[{name:"National Spumoni Day",cats:["icecream"]}],freebies:[]},
 {m:8,d:22,holidays:[{name:"National Eat a Peach Day",cats:["snack"]}],freebies:[]},
 {m:8,d:23,holidays:[{name:"National Sponge Cake Day",cats:["dessert"]}],freebies:[]},
@@ -188,7 +198,10 @@ window.HOLIDAY_DATA.push(
   {biz:"KFC",offer:"$5.99-ish pot pie deals",fine:"Varies",oc:"Countywide",cats:["meal"],annual:true}
  ]},
 {m:9,d:24,holidays:[{name:"National Cherries Jubilee Day",cats:["dessert"]}],freebies:[]},
-{m:9,d:25,holidays:[{name:"National Quesadilla Day",cats:["mexican"]},{name:"National Lobster Day",cats:["meal"]}],freebies:[]},
+{m:9,d:25,holidays:[{name:"National Quesadilla Day",cats:["mexican"]},{name:"National Lobster Day",cats:["meal"]}],
+ freebies:[
+  {biz:"Taco Bell / Del Taco",offer:"Quesadilla app deals (recent years)",fine:"App required",oc:"Countywide (both OC-rooted)",cats:["mexican"],annual:false,kind:"deal"}
+ ]},
 {m:9,d:26,holidays:[{name:"National Pancake Day (September edition)",cats:["breakfast"]},{name:"National Dumpling Day",cats:["meal"]}],freebies:[]},
 {m:9,d:27,holidays:[{name:"National Chocolate Milk Day",cats:["drinks"]}],freebies:[]},
 {m:9,d:28,holidays:[{name:"National Drink Beer Day",cats:["drinks"]},{name:"National Strawberry Cream Pie Day",cats:["dessert"]}],freebies:[]},
@@ -238,7 +251,10 @@ window.HOLIDAY_DATA.push(
  ]},
 {m:10,d:15,holidays:[{name:"National Mushroom Day",cats:["meal"]},{name:"National Cheese Curd Day",cats:["snack"]}],freebies:[]},
 {m:10,d:16,holidays:[{name:"National Boss's Day",cats:["appreciation"]},{name:"World Food Day",cats:["meal"]}],freebies:[]},
-{m:10,d:17,holidays:[{name:"National Pasta Day",cats:["meal"]}],freebies:[]},
+{m:10,d:17,holidays:[{name:"National Pasta Day",cats:["meal"]}],
+ freebies:[
+  {biz:"Buca di Beppo / Maggiano's",offer:"Pasta Day specials (recent years: discounted pasta entrées)",fine:"Dine-in; varies",oc:"Buca: HB · Maggiano's: South Coast Plaza",cats:["meal"],annual:false,kind:"deal"}
+ ]},
 {m:10,d:18,holidays:[{name:"National Chocolate Cupcake Day",cats:["dessert"]}],freebies:[]},
 {m:10,d:19,holidays:[{name:"National Seafood Bisque Day",cats:["meal"]}],freebies:[]},
 {m:10,d:20,holidays:[{name:"National Brandied Fruit Day",cats:["dessert"]}],freebies:[]},
@@ -249,9 +265,10 @@ window.HOLIDAY_DATA.push(
 {m:10,d:25,holidays:[{name:"National Greasy Foods Day",cats:["snack","meal"]}],freebies:[]},
 {m:10,d:26,holidays:[{name:"National Pumpkin Day",cats:["dessert","snack"]}],freebies:[]},
 {m:10,d:27,holidays:[{name:"National American Beer Day",cats:["drinks"]}],freebies:[]},
-{m:10,d:28,holidays:[{name:"National Chocolate Day",cats:["dessert"]}],
+{m:10,d:28,holidays:[{name:"National Chocolate Day",cats:["dessert"]},{name:"National First Responders Day",cats:["appreciation"]}],
  freebies:[
-  {biz:"See's Candies",offer:"Free chocolate piece for walk-ins (their everyday sample tradition — extra fitting today)",fine:"While supplies last",oc:"Mission Viejo, Brea, HB, Orange + more",cats:["dessert"],annual:true}
+  {biz:"See's Candies",offer:"Free chocolate piece for walk-ins (their everyday sample tradition — extra fitting today)",fine:"While supplies last",oc:"Mission Viejo, Brea, HB, Orange + more",cats:["dessert"],annual:true},
+  {biz:"Krispy Kreme",offer:"FREE doughnut + coffee for first responders (recent years, sometimes a full appreciation week)",fine:"ID/uniform; participating shops",oc:"Santa Ana, Orange, Buena Park",cats:["appreciation","donut","coffee"],annual:true}
  ]},
 {m:10,d:29,holidays:[{name:"National Oatmeal Day",cats:["breakfast"]},{name:"National Cat Day",cats:["other"]}],freebies:[]},
 {m:10,d:30,holidays:[{name:"National Candy Corn Day",cats:["dessert"]},{name:"National Buy a Doughnut Day",cats:["donut"]}],freebies:[]},
@@ -315,7 +332,10 @@ window.HOLIDAY_DATA.push(
   {biz:"Lazy Dog Restaurant",offer:"Veterans Day specials (HQ in Costa Mesa)",fine:"Verify each year",oc:"HB, Irvine, Brea, Orange",cats:["appreciation","meal"],annual:true},
   {biz:"Fogo de Chão",offer:"50% OFF Full Churrasco meal for veterans & active duty (2025: valid Nov 7–11); guests get 10% off (up to 3)",fine:"Military ID; dine-in",oc:"Irvine (Irvine Spectrum)",cats:["appreciation","meal"],annual:true,kind:"deal"}
  ]},
-{m:11,d:12,holidays:[{name:"National French Dip Day (invented in LA!)",cats:["burger","meal"]},{name:"National Pizza with the Works Except Anchovies Day",cats:["pizza"]}],freebies:[]},
+{m:11,d:12,holidays:[{name:"Starbucks Red Cup Day (announced each Nov — usually a mid-Nov Thursday)",cats:["coffee"]},{name:"National French Dip Day (invented in LA!)",cats:["burger","meal"]},{name:"National Pizza with the Works Except Anchovies Day",cats:["pizza"]}],
+ freebies:[
+  {biz:"Starbucks",offer:"FREE reusable holiday red cup with any handcrafted holiday drink — exact date announced each November",fine:"While supplies last (they go FAST); watch the app",oc:"Countywide",cats:["coffee"],annual:true,kind:"free"}
+ ]},
 {m:11,d:13,holidays:[{name:"World Kindness Day",cats:["other"]},{name:"National Indian Pudding Day",cats:["dessert"]}],freebies:[]},
 {m:11,d:14,holidays:[{name:"National Pickle Day",cats:["snack"]}],freebies:[]},
 {m:11,d:15,holidays:[{name:"National Clean Out Your Refrigerator Day",cats:["other"]},{name:"National Raisin Bran Cereal Day",cats:["breakfast"]}],freebies:[]},
@@ -357,10 +377,16 @@ window.HOLIDAY_DATA.push(
 {m:12,d:6,holidays:[{name:"National Gazpacho Day",cats:["meal"]},{name:"St. Nicholas Day",cats:["other"]}],freebies:[]},
 {m:12,d:7,holidays:[{name:"National Cotton Candy Day",cats:["dessert"]},{name:"Pearl Harbor Remembrance Day",cats:["appreciation"]}],freebies:[]},
 {m:12,d:8,holidays:[{name:"National Brownie Day",cats:["dessert"]}],freebies:[]},
-{m:12,d:9,holidays:[{name:"National Pastry Day",cats:["dessert","breakfast"]}],freebies:[]},
+{m:12,d:9,holidays:[{name:"National Pastry Day",cats:["dessert","breakfast"]}],
+ freebies:[
+  {biz:"Porto's Bakery",offer:"No formal promo needed — potato balls & guava strudels around a dollar-something make every day a deal (Buena Park!)",fine:"Expect a line; worth it",oc:"Buena Park",cats:["dessert","breakfast"],annual:true,kind:"deal"}
+ ]},
 {m:12,d:10,holidays:[{name:"National Lager Day",cats:["drinks"]}],freebies:[]},
 {m:12,d:11,holidays:[{name:"National Noodle Ring Day",cats:["meal"]}],freebies:[]},
-{m:12,d:12,holidays:[{name:"National Ambrosia Day",cats:["dessert"]},{name:"National Gingerbread House Day",cats:["dessert"]}],freebies:[]},
+{m:12,d:12,holidays:[{name:"Krispy Kreme Day of the Dozens (12/12)",cats:["donut"]},{name:"National Ambrosia Day",cats:["dessert"]},{name:"National Gingerbread House Day",cats:["dessert"]}],
+ freebies:[
+  {biz:"Krispy Kreme",offer:"$2-ish Original Glazed dozen with purchase of any dozen — their annual 12/12 tradition",fine:"Participating shops; limit varies",oc:"Santa Ana, Orange, Buena Park",cats:["donut"],annual:true,kind:"deal"}
+ ]},
 {m:12,d:13,holidays:[{name:"National Cocoa Day",cats:["drinks","dessert"]}],freebies:[]},
 {m:12,d:14,holidays:[{name:"National Biscuits and Gravy Day",cats:["breakfast"]},{name:"Free Shipping Day (date varies)",cats:["other"]}],freebies:[]},
 {m:12,d:15,holidays:[{name:"National Cupcake Day",cats:["dessert"]}],

@@ -11,7 +11,10 @@ window.HOLIDAY_DATA.push(
  ]},
 {m:1,d:2,holidays:[{name:"National Buffet Day",cats:["meal"]},{name:"National Cream Puff Day",cats:["dessert"]}],freebies:[]},
 {m:1,d:3,holidays:[{name:"National Chocolate Covered Cherry Day",cats:["dessert"]}],freebies:[]},
-{m:1,d:4,holidays:[{name:"National Spaghetti Day",cats:["meal"]}],freebies:[]},
+{m:1,d:4,holidays:[{name:"National Spaghetti Day",cats:["meal"]}],
+ freebies:[
+  {biz:"Buca di Beppo",offer:"Spaghetti Day specials (past years: discounted spaghetti & meatballs)",fine:"Varies by year; dine-in",oc:"Huntington Beach",cats:["meal"],annual:false,kind:"deal"}
+ ]},
 {m:1,d:5,holidays:[{name:"National Whipped Cream Day",cats:["dessert"]}],freebies:[]},
 {m:1,d:6,holidays:[{name:"National Shortbread Day",cats:["dessert"]},{name:"National Bean Day",cats:["meal"]}],freebies:[]},
 {m:1,d:7,holidays:[{name:"National Tempura Day",cats:["meal"]}],freebies:[]},
@@ -48,7 +51,11 @@ window.HOLIDAY_DATA.push(
 {m:1,d:27,holidays:[{name:"National Chocolate Cake Day",cats:["dessert"]}],freebies:[]},
 {m:1,d:28,holidays:[{name:"National Blueberry Pancake Day",cats:["breakfast"]}],freebies:[]},
 {m:1,d:29,holidays:[{name:"National Corn Chip Day",cats:["snack"]}],freebies:[]},
-{m:1,d:30,holidays:[{name:"National Croissant Day",cats:["breakfast","dessert"]}],freebies:[]},
+{m:1,d:30,holidays:[{name:"National Croissant Day",cats:["breakfast","dessert"]}],
+ freebies:[
+  {biz:"85°C Bakery Cafe",offer:"Croissant Day promos have popped up (Taiwanese bakery chain, huge OC presence)",fine:"Verify each year",oc:"Irvine, Garden Grove, Fountain Valley, Brea",cats:["breakfast","dessert"],annual:false,kind:"deal"},
+  {biz:"Paris Baguette",offer:"Rewards app pastry promos",fine:"App required; varies",oc:"Irvine, Buena Park, Fullerton, Garden Grove",cats:["breakfast","dessert"],annual:false,kind:"deal"}
+ ]},
 {m:1,d:31,holidays:[{name:"National Hot Chocolate Day",cats:["drinks","dessert"]}],
  freebies:[
   {biz:"Baskin-Robbins",offer:"'Celebrate 31' — discounted scoops (~$1.99) on the 31st of every month that has one (Jan, Mar, May, Jul, Aug, Oct, Dec)",fine:"Participating shops; price varies",oc:"Countywide",cats:["icecream"],annual:true,kind:"deal"}
@@ -75,7 +82,9 @@ window.HOLIDAY_DATA.push(
  freebies:[
   {biz:"Blaze Pizza",offer:"App/rewards pizza deals (SoCal-born chain)",fine:"App required",oc:"Irvine, Costa Mesa, Anaheim, Brea",cats:["pizza"],annual:true},
   {biz:"MOD Pizza",offer:"Rewards member deals/BOGOs",fine:"App required",oc:"Tustin, Lake Forest, HB",cats:["pizza"],annual:true},
-  {biz:"7-Eleven",offer:"Discounted whole pizza ($3–5) for 7Rewards members",fine:"App required",oc:"Everywhere in OC",cats:["pizza"],annual:true}
+  {biz:"7-Eleven",offer:"Discounted whole pizza ($3–5) for 7Rewards members",fine:"App required",oc:"Everywhere in OC",cats:["pizza"],annual:true},
+  {biz:"Round Table Pizza",offer:"Pizza Day deals for Royal Rewards members (recent years)",fine:"App required",oc:"Costa Mesa, Fountain Valley, Orange + more",cats:["pizza"],annual:false,kind:"deal"},
+  {biz:"Mountain Mike's Pizza",offer:"Pizza Day promo codes (recent years)",fine:"Online/code; varies",oc:"Anaheim, Orange, Santa Ana + more",cats:["pizza"],annual:false,kind:"deal"}
  ]},
 {m:2,d:10,holidays:[{name:"National Cream Cheese Brownie Day",cats:["dessert"]}],freebies:[]},
 {m:2,d:11,holidays:[{name:"National Peppermint Patty Day",cats:["dessert"]}],freebies:[]},
@@ -87,7 +96,7 @@ window.HOLIDAY_DATA.push(
  ]},
 {m:2,d:15,holidays:[{name:"National Gumdrop Day",cats:["dessert"]}],freebies:[]},
 {m:2,d:16,holidays:[{name:"National Almond Day",cats:["snack"]}],freebies:[]},
-{m:2,d:17,holidays:[{name:"Lunar New Year (2026 — Year of the Horse)",cats:["meal"]},{name:"Random Acts of Kindness Day",cats:["other"]},{name:"National Cabbage Day",cats:["meal"]}],
+{m:2,d:17,holidays:[{name:"Lunar New Year (2026 — Year of the Horse)",cats:["meal"]},{name:"Mardi Gras / Fat Tuesday (2026)",cats:["dessert","meal"]},{name:"Random Acts of Kindness Day",cats:["other"]},{name:"National Cabbage Day",cats:["meal"]}],
  freebies:[
   {biz:"Din Tai Fung",offer:"FREE red envelope for every dine-in/takeout guest (2026: starts Feb 10) — prizes inside range from treats to gift cards",fine:"While supplies last",oc:"South Coast Plaza (Costa Mesa)",cats:["meal"],annual:true,kind:"free"},
   {biz:"Asian restaurants & bakeries (various)",offer:"LNY specials countywide — 85°C, Paris Baguette & boba shops often run limited-time promos",fine:"Varies by year",oc:"Irvine, Garden Grove, Westminster + more",cats:["meal","dessert"],annual:true,kind:"deal"}
@@ -108,9 +117,9 @@ window.HOLIDAY_DATA.push(
  ]},
 {m:2,d:25,holidays:[{name:"National Clam Chowder Day",cats:["meal"]}],
  freebies:[
-  {biz:"Boudin SF",offer:"Clam Chowder Day specials on their famous sourdough bread bowl chowder (past years: discounted bowls & rewards bonuses)",fine:"Boudin Bakery Rewards app; verify each year",oc:"South Coast Plaza (Costa Mesa) — check app for current OC locations",cats:["meal"],annual:false,kind:"deal"}
+  {biz:"Boudin SF",offer:"BOGO clam chowder sourdough bread bowls — two for the price of one, PLUS a bounce-back BOGO entrée coupon for a return visit (~2 weeks)",fine:"Day-of chowder purchase required; verify each year",oc:"South Coast Plaza (Costa Mesa) — check app for current OC locations",cats:["meal"],annual:true,kind:"deal"}
  ]},
-{m:2,d:26,holidays:[{name:"National Pistachio Day",cats:["snack"]}],freebies:[]},
+{m:2,d:26,holidays:[{name:"National Pistachio Day",cats:["snack"]},{name:"National Chili Day (4th Thu of Feb — 2026: Feb 26)",cats:["meal"]}],freebies:[]},
 {m:2,d:27,holidays:[{name:"National Strawberry Day",cats:["snack","dessert"]}],freebies:[]},
 {m:2,d:28,holidays:[{name:"National Chocolate Soufflé Day",cats:["dessert"]}],freebies:[]},
 
@@ -155,7 +164,10 @@ window.HOLIDAY_DATA.push(
   {biz:"Dairy Queen",offer:"FREE Cone Day — free small vanilla cone to celebrate spring",fine:"Participating locations; date announced each year (~Mar 19–20)",oc:"Orange, Santa Ana, Garden Grove, La Habra",cats:["icecream"],annual:true},
   {biz:"Rita's Italian Ice",offer:"Free regular Italian ice on first day of spring",fine:"Participating locations",oc:"Check current OC locations",cats:["icecream"],annual:true}
  ]},
-{m:3,d:21,holidays:[{name:"National French Bread Day",cats:["snack"]}],freebies:[]},
+{m:3,d:21,holidays:[{name:"National Corn Dog Day (3rd Sat of March — 2026: Mar 21)",cats:["snack","meal"]},{name:"National French Bread Day",cats:["snack"]}],
+ freebies:[
+  {biz:"Wienerschnitzel",offer:"FREE corn dog — the Irvine-HQ'd chain celebrates its signature day (recent years: free corn dog, sometimes with purchase)",fine:"Participating locations; verify each year",oc:"Countywide",cats:["snack","meal"],annual:true,kind:"free"}
+ ]},
 {m:3,d:22,holidays:[{name:"National Bavarian Crepes Day",cats:["dessert","breakfast"]}],freebies:[]},
 {m:3,d:23,holidays:[{name:"National Chip and Dip Day",cats:["snack"]}],freebies:[]},
 {m:3,d:24,holidays:[{name:"National Cheesesteak Day",cats:["burger"]}],
@@ -171,7 +183,10 @@ window.HOLIDAY_DATA.push(
 {m:3,d:31,holidays:[{name:"National Clams on the Half Shell Day",cats:["meal"]}],freebies:[]},
 
 // ============ APRIL ============
-{m:4,d:1,holidays:[{name:"April Fools' Day",cats:["other"]},{name:"National Sourdough Bread Day",cats:["snack"]}],freebies:[]},
+{m:4,d:1,holidays:[{name:"April Fools' Day",cats:["other"]},{name:"National Sourdough Bread Day",cats:["snack"]}],
+ freebies:[
+  {biz:"Boudin SF",offer:"FREE sourdough loaf with $15 purchase ('No joke! Enjoy a loaf on us') — their Sourdough Bread Day tradition",fine:"Verify each year",oc:"South Coast Plaza (Costa Mesa)",cats:["snack"],annual:true,kind:"free"}
+ ]},
 {m:4,d:2,holidays:[{name:"National Burrito Day (1st Thu of April)",cats:["mexican"]},{name:"National Peanut Butter & Jelly Day",cats:["snack"]}],
  freebies:[
   {biz:"Chipotle",offer:"Burrito Day app promos — free delivery, BOGO codes, 'Burrito Vault' giveaways",fine:"App required; HQ is in Newport Beach!",oc:"Countywide",cats:["mexican"],annual:true},
@@ -182,8 +197,14 @@ window.HOLIDAY_DATA.push(
 {m:4,d:3,holidays:[{name:"National Chocolate Mousse Day",cats:["dessert"]}],freebies:[]},
 {m:4,d:4,holidays:[{name:"National Cordon Bleu Day",cats:["meal"]}],freebies:[]},
 {m:4,d:5,holidays:[{name:"Easter Sunday (2026)",cats:["meal"]},{name:"National Caramel Day",cats:["dessert"]}],freebies:[]},
-{m:4,d:6,holidays:[{name:"National Caramel Popcorn Day",cats:["snack"]},{name:"New Beer's Eve",cats:["drinks"]}],freebies:[]},
-{m:4,d:7,holidays:[{name:"National Beer Day",cats:["drinks"]}],freebies:[]},
+{m:4,d:6,holidays:[{name:"National Acai Bowl Day",cats:["drinks","breakfast"]},{name:"National Caramel Popcorn Day",cats:["snack"]},{name:"New Beer's Eve",cats:["drinks"]}],
+ freebies:[
+  {biz:"Nekter Juice Bar",offer:"Acai bowl promos (HQ in Santa Ana — they lean into this one)",fine:"App required; verify each year",oc:"Countywide (OC original)",cats:["drinks","breakfast"],annual:false,kind:"deal"}
+ ]},
+{m:4,d:7,holidays:[{name:"National Beer Day",cats:["drinks"]}],
+ freebies:[
+  {biz:"BJ's Restaurant & Brewhouse",offer:"House beer specials (HQ in Huntington Beach)",fine:"21+, dine-in; varies",oc:"HB, Irvine, Brea, Laguna Hills",cats:["drinks"],annual:false,kind:"deal"}
+ ]},
 {m:4,d:8,holidays:[{name:"National Empanada Day",cats:["meal"]}],freebies:[]},
 {m:4,d:9,holidays:[{name:"National Gin and Tonic Day",cats:["drinks"]}],freebies:[]},
 {m:4,d:10,holidays:[{name:"National Cinnamon Crescent Day",cats:["dessert","breakfast"]}],freebies:[]},
@@ -222,19 +243,25 @@ window.HOLIDAY_DATA.push(
 {m:4,d:27,holidays:[{name:"National Prime Rib Day",cats:["meal"]}],freebies:[]},
 {m:4,d:28,holidays:[{name:"National Blueberry Pie Day",cats:["dessert"]}],freebies:[]},
 {m:4,d:29,holidays:[{name:"National Shrimp Scampi Day",cats:["meal"]}],freebies:[]},
-{m:4,d:30,holidays:[{name:"National Raisin Day",cats:["snack"]}],freebies:[]},
+{m:4,d:30,holidays:[{name:"National Bubble Tea Day / National Boba Day",cats:["drinks"]},{name:"National Raisin Day",cats:["snack"]}],
+ freebies:[
+  {biz:"Tastea",offer:"Boba Day surprises — OC original, founded in Garden Grove in 2001",fine:"Check app/socials day-of",oc:"Garden Grove, Fountain Valley, Anaheim, Irvine + more",cats:["drinks"],annual:true,kind:"deal"},
+  {biz:"7 Leaves Cafe",offer:"Watch the app for Boba Day promos (another Garden Grove original)",fine:"App required; verify",oc:"Countywide (OC original)",cats:["drinks"],annual:false,kind:"deal"},
+  {biz:"Gong Cha / Kung Fu Tea",offer:"FREE boba topping for loyalty members; Kung Fu Tea (who founded the holiday) does free toppings too",fine:"App/loyalty required",oc:"Irvine, Garden Grove, Fullerton + more",cats:["drinks"],annual:true,kind:"free"}
+ ]},
 
 // ============ MAY ============
 {m:5,d:1,holidays:[{name:"National Chocolate Parfait Day",cats:["dessert"]}],freebies:[]},
 {m:5,d:2,holidays:[{name:"National Truffle Day",cats:["dessert"]}],freebies:[]},
 {m:5,d:3,holidays:[{name:"National Raspberry Popover Day",cats:["breakfast"]}],freebies:[]},
 {m:5,d:4,holidays:[{name:"Star Wars Day (May the 4th)",cats:["other"]},{name:"National Orange Juice Day",cats:["drinks"]}],freebies:[]},
-{m:5,d:5,holidays:[{name:"Cinco de Mayo",cats:["mexican","drinks"]}],
+{m:5,d:5,holidays:[{name:"Cinco de Mayo",cats:["mexican","drinks"]},{name:"National Teacher Appreciation Day (2026)",cats:["appreciation"]}],
  freebies:[
   {biz:"Del Taco",offer:"Cinco deals via Del Yeah! Rewards (free tacos with purchase, etc.)",fine:"App required",oc:"Countywide",cats:["mexican"],annual:true},
   {biz:"Taco Bell",offer:"Cinco app promos (HQ in Irvine!)",fine:"App required",oc:"Countywide",cats:["mexican"],annual:true},
   {biz:"El Torito",offer:"Cinco specials, live entertainment, margarita deals",fine:"21+ for drinks; expect crowds",oc:"Anaheim, Costa Mesa, Irvine",cats:["mexican","drinks"],annual:true},
-  {biz:"Chronic Tacos",offer:"Taco deals (OC-founded chain)",fine:"Varies by location",oc:"Newport Beach, HB, Costa Mesa + more",cats:["mexican"],annual:true}
+  {biz:"Chronic Tacos",offer:"Taco deals (OC-founded chain)",fine:"Varies by location",oc:"Newport Beach, HB, Costa Mesa + more",cats:["mexican"],annual:true},
+  {biz:"Teacher deals (various)",offer:"Teacher Appreciation Week freebies & BOGOs — Chipotle has done teacher BOGOs, plus chains like Raising Cane's & Insomnia Cookies",fine:"School ID required; announced early May",oc:"Countywide",cats:["appreciation"],annual:true}
  ]},
 {m:5,d:6,holidays:[{name:"National Nurses Day (kicks off Nurses Week)",cats:["appreciation"]},{name:"National Beverage Day",cats:["drinks"]}],
  freebies:[
@@ -247,7 +274,10 @@ window.HOLIDAY_DATA.push(
 {m:5,d:10,holidays:[{name:"Mother's Day (2026)",cats:["meal","appreciation"]},{name:"National Shrimp Day",cats:["meal"]}],freebies:[]},
 {m:5,d:11,holidays:[{name:"National Eat What You Want Day",cats:["meal"]}],freebies:[]},
 {m:5,d:12,holidays:[{name:"National Nutty Fudge Day",cats:["dessert"]}],freebies:[]},
-{m:5,d:13,holidays:[{name:"National Apple Pie Day",cats:["dessert"]}],freebies:[]},
+{m:5,d:13,holidays:[{name:"National Apple Pie Day",cats:["dessert"]}],
+ freebies:[
+  {biz:"Marie Callender's / Polly's Pies",offer:"Pie slice specials (both OC-area pie institutions)",fine:"Varies by year",oc:"Multiple OC locations",cats:["dessert"],annual:false,kind:"deal"}
+ ]},
 {m:5,d:14,holidays:[{name:"National Buttermilk Biscuit Day",cats:["breakfast"]}],freebies:[]},
 {m:5,d:15,holidays:[{name:"National Chocolate Chip Day",cats:["dessert"]}],freebies:[]},
 {m:5,d:16,holidays:[{name:"National BBQ Day",cats:["meal"]},{name:"National Mimosa Day",cats:["drinks"]}],freebies:[]},
