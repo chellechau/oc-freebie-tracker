@@ -80,6 +80,9 @@
 
   function visibleDays() {
     let days = DATA.filter(matchesFilters);
+    // A search always scans the whole year — otherwise a February deal is
+    // invisible from the July "Upcoming" window and looks missing.
+    if (state.query) return days;
     if (state.view === "upcoming") {
       // next 45 days, wrapping around the new year
       days = days.filter(day => {
@@ -207,9 +210,10 @@
 
     el("#stats").textContent =
       `${days.length} day${days.length === 1 ? "" : "s"} · ${freebieCount} freebie/deal listing${freebieCount === 1 ? "" : "s"}` +
-      (state.view === "upcoming" ? " in the next 45 days" : "");
+      (state.query ? " matching your search (full year)" :
+       state.view === "upcoming" ? " in the next 45 days" : "");
 
-    if (state.view === "upcoming" || state.view !== "all") {
+    if (!state.query && (state.view === "upcoming" || state.view !== "all")) {
       el("#results").innerHTML = days.map(dayCardHTML).join("") ||
         `<p class="empty">Nothing matches — try clearing a filter.</p>`;
     } else {
@@ -228,12 +232,21 @@
   }
 
   function syncControls() {
-    document.querySelectorAll("#month-tabs button").forEach(b => {
+    document.querySelectorAll("#view-tabs button").forEach(b => {
       b.classList.toggle("active", String(state.view) === b.dataset.view);
     });
-    document.querySelectorAll("#cat-chips button").forEach(b => {
-      b.classList.toggle("active", state.cats.has(b.dataset.cat));
+    el("#month-select").value = typeof state.view === "number" ? String(state.view) : "";
+    el("#month-select").classList.toggle("active", typeof state.view === "number");
+
+    const n = state.cats.size;
+    el("#cat-btn").innerHTML =
+      (n === 0 ? `🏷️ Categories` : n === 1 ? CAT_LABEL[[...state.cats][0]] : `🏷️ ${n} categories`) +
+      ` <span class="caret">▾</span>`;
+    el("#cat-btn").classList.toggle("active", n > 0);
+    document.querySelectorAll("#cat-panel input").forEach(cb => {
+      cb.checked = state.cats.has(cb.value);
     });
+
     el("#freebies-toggle").classList.toggle("active", state.freebiesOnly);
     el("#free-only-toggle").classList.toggle("active", state.freeOnly);
     // freebies-only toggle is meaningless in the birthday view
@@ -242,29 +255,56 @@
 
   // ---- build controls ----
   function init() {
-    const tabs = el("#month-tabs");
-    const mkTab = (view, label) => {
+    const tabs = el("#view-tabs");
+    [["upcoming", "🔜 Upcoming"], ["all", "📅 Full Year"], ["birthday", "🎂 Birthday"]].forEach(([view, label]) => {
       const b = document.createElement("button");
-      b.dataset.view = String(view);
+      b.dataset.view = view;
       b.textContent = label;
-      b.onclick = () => { state.view = typeof view === "string" ? view : Number(view); render(); };
+      b.onclick = () => { state.view = view; render(); };
       tabs.appendChild(b);
-    };
-    mkTab("upcoming", "🔜 Upcoming");
-    mkTab("all", "📅 Full Year");
-    mkTab("birthday", "🎂 Birthday");
-    MONTHS.forEach((name, i) => mkTab(i + 1, name.slice(0, 3)));
+    });
 
-    const chips = el("#cat-chips");
+    const monthSel = el("#month-select");
+    MONTHS.forEach((name, i) => {
+      const o = document.createElement("option");
+      o.value = String(i + 1);
+      o.textContent = name;
+      monthSel.appendChild(o);
+    });
+    monthSel.onchange = () => {
+      state.view = monthSel.value ? Number(monthSel.value) : "upcoming";
+      render();
+    };
+
+    // Categories: multi-select checkbox dropdown
+    const panel = el("#cat-panel");
     CATEGORIES.forEach(c => {
-      const b = document.createElement("button");
-      b.dataset.cat = c.key;
-      b.textContent = c.label;
-      b.onclick = () => {
-        state.cats.has(c.key) ? state.cats.delete(c.key) : state.cats.add(c.key);
+      const label = document.createElement("label");
+      const cb = document.createElement("input");
+      cb.type = "checkbox";
+      cb.value = c.key;
+      cb.onchange = () => {
+        cb.checked ? state.cats.add(c.key) : state.cats.delete(c.key);
         render();
       };
-      chips.appendChild(b);
+      label.appendChild(cb);
+      label.appendChild(document.createTextNode(" " + c.label));
+      panel.appendChild(label);
+    });
+    const clear = document.createElement("button");
+    clear.className = "dd-clear";
+    clear.textContent = "✕ Clear categories";
+    clear.onclick = () => { state.cats.clear(); render(); };
+    panel.appendChild(clear);
+
+    const catBtn = el("#cat-btn");
+    const setOpen = open => {
+      panel.hidden = !open;
+      catBtn.setAttribute("aria-expanded", String(open));
+    };
+    catBtn.onclick = e => { e.stopPropagation(); setOpen(panel.hidden); };
+    document.addEventListener("click", e => {
+      if (!el("#cat-dd").contains(e.target)) setOpen(false);
     });
 
     el("#freebies-toggle").onclick = () => { state.freebiesOnly = !state.freebiesOnly; render(); };
@@ -282,7 +322,6 @@
       window.addEventListener("resize", fitBanner);
       fitBanner();
     }
-    el("#clear-cats").onclick = () => { state.cats.clear(); el("#search").value = ""; state.query = ""; render(); };
     el("#search").oninput = e => { state.query = e.target.value.trim(); render(); };
 
     render();

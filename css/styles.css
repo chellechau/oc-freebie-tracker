@@ -88,27 +88,92 @@ header {
   margin-bottom: -2px;
 }
 
-#month-tabs button, #cat-chips button, .toggle, .link-btn {
+#view-tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+#view-tabs button, .toggle, .dd-btn, #month-select {
   border: 0.5px solid #cfdde4;
   background: #fff;
   color: var(--muted-dark);
   border-radius: 999px;
   padding: 6px 14px;
   font-size: 0.84rem;
+  font-family: inherit;
   cursor: pointer;
   transition: all 0.15s ease;
 }
-#month-tabs button:hover, #cat-chips button:hover, .toggle:hover {
+#view-tabs button:hover, .toggle:hover, .dd-btn:hover, #month-select:hover {
   border-color: var(--accent);
   color: var(--ink);
 }
-#month-tabs button.active, #cat-chips button.active, .toggle.active {
+#view-tabs button.active, .toggle.active, .dd-btn.active, #month-select.active {
   background: var(--accent);
   border-color: var(--accent);
   color: #f6fafc;
   font-weight: 500;
 }
-.link-btn { color: var(--muted); border-style: dashed; }
+
+#month-select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 30px;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%237c93a3' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+#month-select.active {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23f6fafc' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+/* Categories multi-select dropdown */
+.dd { position: relative; }
+.dd-btn .caret { font-size: 0.7em; opacity: 0.7; }
+.dd-panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 30;
+  min-width: 230px;
+  max-height: 320px;
+  overflow-y: auto;
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(43, 58, 69, 0.14);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.dd-panel[hidden] { display: none; }
+.dd-panel label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 10px;
+  border-radius: 9px;
+  font-size: 0.86rem;
+  color: var(--muted-dark);
+  cursor: pointer;
+  user-select: none;
+}
+.dd-panel label:hover { background: var(--accent-soft); color: var(--ink); }
+.dd-panel input[type="checkbox"] {
+  accent-color: var(--accent);
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  cursor: pointer;
+}
+.dd-clear {
+  margin: 6px 4px 2px;
+  border: 0.5px dashed #cfdde4;
+  background: none;
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.78rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+.dd-clear:hover { border-color: var(--accent); color: var(--ink); }
 
 #search {
   flex: 1;
@@ -265,4 +330,15 @@ footer {
 
 @media (max-width: 560px) {
   .card { flex-direction: row; padding: 13px; }
+  header { padding: 12px 10px 0; }
+  .controls { padding: 0 10px; margin-top: 10px; }
+  .control-panel { padding: 12px; }
+  .row { gap: 6px; margin-bottom: 10px; }
+  #view-tabs { gap: 6px; }
+  #view-tabs button, .toggle, .dd-btn, #month-select {
+    padding: 6px 11px;
+    font-size: 0.8rem;
+  }
+  #search { min-width: 100%; }
+  main { padding: 0 10px; }
 }

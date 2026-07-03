@@ -68,18 +68,19 @@
   <div class="controls">
     <div class="control-panel">
       <div class="row">
-        <span class="row-label">View</span>
-        <div id="month-tabs" class="row" style="margin:0"></div>
+        <div id="view-tabs" class="seg"></div>
+        <select id="month-select" aria-label="Jump to a month">
+          <option value="">Month…</option>
+        </select>
       </div>
       <div class="row">
-        <span class="row-label">Filter by type</span>
-        <div id="cat-chips" class="row" style="margin:0"></div>
-        <button id="clear-cats" class="link-btn">✕ Clear filters</button>
-      </div>
-      <div class="row">
-        <button id="freebies-toggle" class="toggle">🎁 Freebies &amp; deals only</button>
-        <button id="free-only-toggle" class="toggle" title="Hide discounts, show only 100%-free offers">🆓 100% free only</button>
-        <input id="search" type="search" placeholder="Search: donut, Krispy Kreme, veterans, taco…" />
+        <div class="dd" id="cat-dd">
+          <button id="cat-btn" class="dd-btn" aria-haspopup="true" aria-expanded="false">🏷️ Categories <span class="caret">▾</span></button>
+          <div class="dd-panel" id="cat-panel" hidden></div>
+        </div>
+        <button id="freebies-toggle" class="toggle" title="Hide days with no known offers">🎁 Offers only</button>
+        <button id="free-only-toggle" class="toggle" title="Hide discounts, show only 100%-free offers">🆓 Free only</button>
+        <input id="search" type="search" placeholder="Search the whole year: Boudin, donut, taco…" />
       </div>
     </div>
   </div>
